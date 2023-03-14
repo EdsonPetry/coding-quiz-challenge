@@ -56,9 +56,9 @@ footer a {
 
 /* Button Elements */
 #startQuizBtn {
-    background-color: orange;
+    background-color: rgb(223, 145, 0);
     border-radius: 50px;
-    padding: 30px;
+    padding: 15px 25px;
     font-size: 30px;
 }
 
