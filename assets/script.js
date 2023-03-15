@@ -6,7 +6,7 @@ const questions = [
         optionB: 'JavaScript',
         optionC: 'CSS',
         optionD: 'Python',
-        correctAnswer: 'optionA'
+        correctAnswer: 'HTML'
     },
 
     {
@@ -15,7 +15,7 @@ const questions = [
         optionB: '.',
         optionC: '.getElementByID',
         optionD: ';',
-        correctAnswer: 'optionA'
+        correctAnswer: '#'
     },
 
     {
@@ -24,7 +24,7 @@ const questions = [
         optionB: '<>',
         optionC: '<h1>',
         optionD: '>h1,',
-        correctAnswer: 'optionC'
+        correctAnswer: '<h1>'
     },
 
     {
@@ -33,7 +33,7 @@ const questions = [
         optionB: 'The body of the webpage',
         optionC: 'An <h1> tag on the webpage',
         optionD: 'All of the above',
-        correctAnswer: 'optionA'
+        correctAnswer: 'The title of the webpage'
     },
 
     {
@@ -42,7 +42,7 @@ const questions = [
         optionB: 'Creates a horizontal line on the webpage',
         optionC: 'Bolds text',
         optionD: 'None of the above',
-        correctAnswer: 'optionA'
+        correctAnswer: 'Creates a line break on the webpage'
     },
 
     {
@@ -51,7 +51,7 @@ const questions = [
         optionB: '<js>',
         optionC: '<link>',
         optionD: '<script>',
-        correctAnswer: 'optionD'
+        correctAnswer: '<script>'
     },
 
     {
@@ -60,7 +60,7 @@ const questions = [
         optionB: 'strings',
         optionC: 'numbers',
         optionD: 'variables',
-        correctAnswer: 'optionD'
+        correctAnswer: 'variable'
     },
 
     { 
@@ -69,7 +69,7 @@ const questions = [
         optionB: 'Yes',
         optionC: 'What',
         optionD: 'They are the same, one is just used for mobile apps.',
-        correctAnswer: 'optionB'
+        correctAnswer: 'Yes'
     },
 
     {
@@ -78,7 +78,7 @@ const questions = [
         optionB: 'myFunction()',
         optionC: 'call function myFunction',
         optionD: 'call.myFunction()',
-        correctAnswer: 'optionB'
+        correctAnswer: 'myFunction()'
     },
 
     {
@@ -87,12 +87,47 @@ const questions = [
         optionB: '<!--This is a comment-->',
         optionC: '#This is a commment',
         optionD: '$$This is a comment$$',
-        correctAnswer: 'optionA'
+        correctAnswer: '//This is a comment'
     }
 
 ]
 
-console.log(questions)
+const hidePage = document.querySelector('.hidePage')
+const startButton = document.querySelector('#startQuizBtn')
+const showQuestions = document.querySelector('.questions')
+const question1 = document.querySelector('#question1')
+const optionA = document.querySelector('.optionA')
+const optionB = document.querySelector('.optionB')
+const optionC = document.querySelector('.optionC')
+const optionD = document.querySelector('.optionD')
+
+startButton.addEventListener('click', startQuiz)
+
+function startQuiz() {
+    hidePage.style.display = 'none'
+    showQuestions.style.display = 'block'
+    showQuiz()
+}
+
+optionA.addEventListener('click', nextQuestion)
+optionB.addEventListener('click', nextQuestion)
+optionC.addEventListener('click', nextQuestion)
+optionD.addEventListener('click', nextQuestion)
+
+function showQuiz() {
+    question1.textContent = questions[0].question
+    optionA.textContent = questions[0].optionA
+    optionB.textContent = questions[0].optionB
+    optionC.textContent = questions[0].optionC
+    optionD.textContent = questions[0].optionD
+}
+
+function nextQuestion () {
+    console.log(questions[0].correctAnswer)
+    console.log(this.innerHTML)
+    if //create if statement to check correct answer
+}
+
 
 /* 
 GIVEN I am taking a code quiz
