@@ -18,6 +18,7 @@ button {
   background-color: rgb(83, 21, 83);
   color: #fff;
   font-size: 25px;
+  border-radius: 5px;
 }
 
 button:hover {
@@ -48,7 +49,11 @@ button:hover {
 
 .quiz-div li {
   display: grid;
+  
 }
+
+
+
 
 
 
