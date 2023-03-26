@@ -62,9 +62,20 @@ button:hover {
   text-align:center;
 }
 
+.end-game {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  padding: 50vh
+}
 
+.end-game button {
+  margin: 50px 25vh;
+}
 
-
+.hide {
+  display:none;
+}
 
 
 
