@@ -19,6 +19,7 @@ button {
   color: #fff;
   font-size: 25px;
   border-radius: 5px;
+  justify-content: space-between;
 }
 
 button:hover {
@@ -50,6 +51,15 @@ button:hover {
 .quiz-div li {
   display: grid;
   
+}
+
+#next-btn {
+  display: block;
+  margin: auto;
+}
+
+#timer-contianer {
+  text-align:center;
 }
 
 

@@ -1,7 +1,24 @@
 // GIVEN I am taking a code quiz
+let startBtn = document.querySelector('#start-btn')
+let startPage = document.querySelector('.start-page')
+let quizPage = document.querySelector('.quiz-div')
 
 /* Add event listener for startBtn so when it is clicked it runs a function called
 startQuiz */
+startBtn.addEventListener('click', startQuiz)
+
+function startQuiz() {
+    startPage.classList.add('hide')
+    quizPage.classList.remove('hide')
+    startTimer()
+}
+
+setInterval(startTimer, 1000)
+
+function startTimer() {
+
+}
+
 
 /* startQuiz function will add hide class on our start-page div and remove hide class on our
 showQuiz div */
@@ -14,7 +31,7 @@ function, if option is wrong, display quiz div background red + subtract time fr
 if option is correct, display quiz div background green */
 // after option is selected display next button
 // set an event listener for next button
-// WHEN next button is clicked next answer should pop up
+// WHEN next button is clicked next question  should pop up
 
 //IF all answer are answer || the timer reaches 0
 // THEN a highscore is displayed with the option to enter your name 
