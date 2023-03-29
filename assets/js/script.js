@@ -4,6 +4,9 @@ let startPage = document.querySelector(".start-page");
 let quizPage = document.querySelector(".quiz-div");
 let optionBtn = document.querySelector(".answerBtn");
 let endPage = document.querySelector(".end-game");
+var currentQuestionIndex = 0;
+let choicesEl = document.querySelector("#choices");
+let timer;
 /* Add event listener for startBtn so when it is clicked it runs a function called
 startQuiz */
 startBtn.addEventListener("click", startQuiz);
@@ -11,10 +14,36 @@ startBtn.addEventListener("click", startQuiz);
 function startQuiz() {
   startPage.classList.add("hide");
   quizPage.classList.remove("hide");
-  startTimer();
-  // displayQuiz()
+  // startTimer();
+  displayQuestion();
 }
 
+function displayQuestion() {
+  var currentQuestion = questions[currentQuestionIndex];
+  var titleEl = document.querySelector("#question-display");
+  titleEl.textContent = currentQuestion.question;
+  for (var i = 0; i < currentQuestion.choices.length; i++) {
+    var choice = currentQuestion.choices[i];
+    var choiceBtn = document.createElement("button");
+    choiceBtn.setAttribute("class", "class");
+    choiceBtn.setAttribute("value", choice);
+    choiceBtn.textContent = choice;
+    choicesEl.appendChild(choiceBtn);
+  }
+}
+
+function questionClick(event) {
+  var buttenEl = event.target;
+  if (!buttenEl.matches('.choice')) {
+    return;
+  } 
+  if (buttenEl.value !== questions[currentQuestionIndex].answer) {
+    timer = timer - 10
+    // Make background color of the box red
+  } else {
+    // Make background color of the box green
+  }
+}
 // Listens for click on button and checks if correct = true, if correct does not = true then subtract time from timer
 // optionBtn.addEventListener('click', corrrectAnswer)
 // correctAnswer() {
@@ -23,7 +52,7 @@ function startQuiz() {
 
 // Timer and countsdown, if timer equals 0:00 then display end game screen
 function startTimer(duration, display) {
-  let timer = duration,
+  timer = duration,
     minutes,
     seconds;
   setInterval(function () {
@@ -50,7 +79,7 @@ function timesUp() {
 }
 
 window.onload = function () {
-  let fiveMinutes = 60 * 1,
+  let fiveMinutes = 60 * 5,
     display = document.querySelector("#time");
   startTimer(fiveMinutes, display);
 };
