@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Next Level</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="assets/js/script.js"></script>
     <script defer src="assets/js/questions.js"></script>
   </head>
@@ -18,9 +21,6 @@
     <div class="start-page">
       <h1>Ed's Coding Quiz!</h1>
       <button id="start-btn">Start</button>
-
-
-
     </div>
     <!-- Quiz page, hidden until start button is clicked -->
     <div class="quiz-div hide">
@@ -33,7 +33,9 @@
       <h1>Time's Up!</h1>
       <button>Restart</button>
       <button>Highscore</button>
+      <input type="text" id="initials" placeholder="Enter your initials" />
+      <button id="save-score-btn">Save Score</button>
+      <ul id="high-scores" class="hide"></ul>
     </div>
   </body>
-
 </html>
